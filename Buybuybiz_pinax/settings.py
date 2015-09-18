@@ -134,6 +134,7 @@ INSTALLED_APPS = [
 
     # external
     'widget_tweaks',
+    'pagination',
     "account",
     "metron",
     "pinax.eventlog",
