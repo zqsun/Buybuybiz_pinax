@@ -133,6 +133,7 @@ INSTALLED_APPS = [
     "pinax_theme_bootstrap",
 
     # external
+    'widget_tweaks',
     "account",
     "metron",
     "pinax.eventlog",
