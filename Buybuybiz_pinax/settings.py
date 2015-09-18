@@ -8,9 +8,12 @@ BASE_DIR = PACKAGE_ROOT
 DEBUG = True
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'utcnet',
+        'USER': 'bbb_admin',
+        'PASSWORD': 'v907129',
+        'HOST': '127.0.0.1',
     }
 }
 
@@ -23,7 +26,7 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Los_Angeles"
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -184,3 +187,4 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
+
