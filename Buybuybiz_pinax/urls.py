@@ -13,6 +13,7 @@ urlpatterns = patterns(
     url(r"^account/", include("account.urls")),
     url(r'^messages/', include('postman.urls')),
     url(r'^partners/', include('partners.urls')),
+    url(r'^myaccount/',include('myaccount.urls', namespace="myaccount")),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

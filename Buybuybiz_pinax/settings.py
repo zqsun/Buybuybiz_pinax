@@ -142,6 +142,7 @@ INSTALLED_APPS = [
     "pinax.eventlog",
     'postman',
     'partners',
+    'myaccount',
     # project
     "Buybuybiz_pinax",
 ]

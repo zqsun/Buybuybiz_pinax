@@ -1,0 +1,58 @@
+{% extends "myaccount/myaccount_base.html" %}
+{% load widget_tweaks %}
+
+{% block page-header %}
+{% if tflag != "edit" %}
+Add Project
+{% else %}
+Edit Project
+{% endif %}
+{% endblock %}
+
+{% block page-wrapper %}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<!-- <div class="col-lg-6"> -->
+					{% if tflag != "edit" %}
+					<form role="form" method="post" action="{% url 'myaccount:addProject' %}" enctype="multipart/form-data">
+					{% else %}
+					<form role="form" method="post" action="{% url 'myaccount:editProject' project_id %}" enctype="multipart/form-data">
+					{% endif %}
+						<div class="form-group">{% csrf_token %}</div>
+						<div class="form-group">
+							<label>Project Name</label>
+							{% render_field project_form.name class="form-control" autofocus="" %}
+						</div>
+						<div class="form-group">
+							<label>Project Description</label>
+							{% render_field project_form.description class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Project Price</label>
+							{% render_field project_form.price class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Project Category</label>
+							{% render_field project_form.category class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Project Goal</label>
+							{% render_field project_form.goal class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Project Picture</label>
+							{% render_field pic_form.picture class="form-control" %}
+						</div>
+						<input type="submit" class="btn btn-lg btn-success btn-block" value="Submit" />
+                        <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
