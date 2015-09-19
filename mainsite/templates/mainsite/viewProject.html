@@ -1,0 +1,39 @@
+{% extends 'site_base.html' %}
+
+{% block page-header %}Project Details{% endblock %}
+
+{% block body_base %}
+<div class="container">
+<div class="col-md-8">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="panel-title"><h2>{{project.name}}</h2></div>
+		</div>
+		<div class="panel-body">
+			<ul class="list-inline">
+				<li class="col-md-6"><b>Category:</b> {{project.category.category}}</li>
+				<li class="col-md-6"><b>Goal:</b> {{project.goal.goal}}</li>
+			</ul>
+			<hr>
+			<p>{{project.description}}</p>
+			<hr><br>
+		</div>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="panel panel-success">
+		<div class="panel-heading">Publisher Info</div>
+		<div class="panel-body">
+			<ul class="list-unstyled">
+				<li><b>Company Name: </b>UTCLinks</li>
+				<li><b>Company Location: </b>Cupertino, CA</li>
+				<li><b>Company Description: </b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p></li>
+			</ul>
+		</div>
+		<div class="panel-footer">
+			<a href="{%url 'postman_write' %}{{project.post_by.username}}?subject=Details Request for {{project.name}}" class="btn btn-outline btn-success col-md-offset-4">Contact</a>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}

@@ -144,6 +144,7 @@ INSTALLED_APPS = [
     'postman',
     'partners',
     'myaccount',
+    'mainsite',
     # project
     "Buybuybiz_pinax",
 ]
