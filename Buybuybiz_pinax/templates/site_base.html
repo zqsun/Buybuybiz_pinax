@@ -43,8 +43,26 @@
 			<div class="collapse navbar-collapse navbar-responsive-collapse">
 				{% block nav %}
 				<ul class="nav navbar-nav">
-					<li><a href="#tab_one">One</a></li>
-					<li><a href="#tab_two">Two</a></li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Projects<span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+					    <li><a href="#">All Indutries</a></li>
+					    <li><a href="#">Healthcare</a></li>
+					    <li><a href="#">Communications</a></li>
+					    <li><a href="#">Robotics</a></li>
+					    <li><a href="#">Retailing</a></li>
+					    <li><a href="#">Electronics</a></li>
+					    <li><a href="#">Energy</a></li>
+					    <li><a href="#">Finacial Services</a></li>
+					    <li><a href="#">Real Estate</a></li>
+					    <li><a href="#">Media &amp; Entertainment</a></li>
+					    <li><a href="#">Software</a></li>
+					    <li><a href="#">Transportation</a></li>
+					  </ul>
+					</li>
+					<li><a href="{% url 'browsepartners' %}">Partners</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 				{% endblock %}
 				{% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
