@@ -4,9 +4,23 @@
 
 <ul class="nav navbar-nav pull-right">
     {% if request.user.is_authenticated %}
-        <p class="navbar-text">
-            <i class="fa fa-user"></i> {% user_display request.user %}
-        </p>
+        <!-- .dropdown-user -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i> {% user_display request.user %} <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-user">
+            <li><a href="{% url 'myaccount:index' %}"><i class="fa fa-user fa-fw"></i> {% trans "Dashboard" %}</a>
+            </li>
+            <li><a href="{% url 'account_settings' %}"><i class="fa fa-cog fa-fw"></i> {% trans "Settings" %}</a>
+            </li>
+            <li class="divider"></li>
+            <li><a id="account_logout" href="{% url 'account_logout' %}"><i class="fa fa-power-off fa-fw"></i> {% trans "Log out" %}</a>
+            </li>
+          </ul>
+          
+        </li>
+        <!-- /.dropdown-user -->
         <!-- .dropdown-messages -->
         <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -76,12 +90,6 @@
               </ul>
             </li>
             <!-- /.dropdown-messages -->
-        <li>
-            <a href="{% url 'account_settings' %}"><i class="fa fa-cog"></i> {% trans "Settings" %}</a>
-        </li>
-        <li>
-            <a id="account_logout" href="{% url 'account_logout' %}"><i class="fa fa-power-off"></i> {% trans "Log out" %}</a>
-        </li>
     {% else %}
         <li><a href="{% url 'account_login' %}">{% trans "Log in" %}</a></li>
         {% if ACCOUNT_OPEN_SIGNUP %}
