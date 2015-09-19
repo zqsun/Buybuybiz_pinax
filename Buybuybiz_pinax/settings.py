@@ -135,6 +135,7 @@ INSTALLED_APPS = [
     "pinax_theme_bootstrap",
 
     # external
+    'haystack',
     'widget_tweaks',
     'pagination',
     "account",
@@ -197,3 +198,15 @@ AUTHENTICATION_BACKENDS = [
 # Postman settings
 POSTMAN_DISABLE_USER_EMAILING = True
 POSTMAN_AUTO_MODERATE_AS = True
+
+# Haystack backend settings
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
+
+# Haystack realtime data handler
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
