@@ -8,8 +8,11 @@
 <link href="{% static 'bower_components/metisMenu/dist/metisMenu.min.css' %}" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="{% static 'myaccount/dist/css/sb-admin-2.css' %}" rel="stylesheet">
-
 {% endblock %}
+
+{% block body_class %}myaccount_body{% endblock %}
+
+{% block navbar_class %}navbar-static-top{% endblock %}
 
 {% block nav_sidebar %}
 <div class="navbar-default sidebar" role="navigation">
@@ -47,7 +50,7 @@
 <!-- /.navbar-static-side -->
 {% endblock %}
 
-{% block content %}
+{% block body_base %}
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
@@ -67,7 +70,7 @@
 </div>
 {% endblock %}
 
-{% block js_block %}
+{% block extra_body %}
 <!-- Metis Menu Plugin JavaScript -->
 <script src="{% static 'bower_components/metisMenu/dist/metisMenu.min.js' %}"></script>
 
