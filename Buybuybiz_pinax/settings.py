@@ -138,7 +138,7 @@ INSTALLED_APPS = [
     "account",
     "metron",
     "pinax.eventlog",
-
+    'postman',
     # project
     "Buybuybiz_pinax",
 ]
@@ -190,3 +190,6 @@ AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
 
+# Postman settings
+POSTMAN_DISABLE_USER_EMAILING = True
+POSTMAN_AUTO_MODERATE_AS = True
