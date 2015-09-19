@@ -1,0 +1,37 @@
+{% extends 'site_base.html' %}
+{% load i18n pagination_tags %}
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+{% block body_base %}
+<div class="container" role="main">
+<h2>Our Partners</h2>
+<hr>
+{% autopaginate partners 6 %}
+{% if invalid_page %}
+    <p>{% trans "Sorry, this page number is invalid." %}</p>
+{% else %}
+{% if partners %}
+	{% for p in partners %}
+	<div class="panel panel-default col-md-12">
+		<div class="panel-body">
+			<div class="row">
+				<img src="{{p.picture.url}}" class="col-md-4 img-thumbnail">
+				<div class="col-md-8">
+					<h3>{{p.name}} - {{p.title}}, {{p.company}}</h3>
+					<hr>
+					<p>{{p.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+{% endif %}
+{% endif %}
+
+<!-- Pager -->
+<nav>
+{% paginate %}
+</nav>
+</div>
+{% endblock %}
