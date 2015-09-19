@@ -1,0 +1,79 @@
+[
+    {
+        "pk": 1,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Healthcare"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Communications"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Robotics"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Retailing"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Electronics"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Energy"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Financial Services"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Real Estate"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Media"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Software"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Transportation"
+        }
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "pk": 1,
+        "model": "myaccount.bizGoal",
+        "fields": {
+            "goal": "Companies For Sale"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "myaccount.bizGoal",
+        "fields": {
+            "goal": "Looking for Funding"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "myaccount.bizGoal",
+        "fields": {
+            "goal": "Technologies Transfer"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "myaccount.bizGoal",
+        "fields": {
+            "goal": "Look for Partners"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "myaccount.bizGoal",
+        "fields": {
+            "goal": "Look for Markets"
+        }
+    }
+]
