@@ -113,6 +113,7 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.auth.middleware.SessionAuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'pagination.middleware.PaginationMiddleware',
 ]
 
 ROOT_URLCONF = "Buybuybiz_pinax.urls"
@@ -140,6 +141,7 @@ INSTALLED_APPS = [
     "metron",
     "pinax.eventlog",
     'postman',
+    'partners',
     # project
     "Buybuybiz_pinax",
 ]
