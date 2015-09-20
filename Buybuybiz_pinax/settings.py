@@ -139,6 +139,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'pagination',
     "account",
+    'userprofile',
     "metron",
     "pinax.eventlog",
     'postman',
