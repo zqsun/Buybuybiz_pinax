@@ -145,7 +145,7 @@ def editProfile(request):
 			project.save()
 			# added = True
 			messages.success(request, 'Your profile is successfullly updated.')
-		return HttpResponseRedirect(reverse('myaccount:myProjects'))
+		return HttpResponseRedirect(reverse('myaccount:editProfile'))
 	else:
 		profile_form = ProfileForm(instance=p)
 	context = {'profile_form':profile_form}
