@@ -1,0 +1,50 @@
+{% extends "myaccount/myaccount_base.html" %}
+{% load widget_tweaks %}
+
+{% block page-header %}
+{% if tflag != "edit" %}
+Add Project
+{% else %}
+Edit Project
+{% endif %}
+{% endblock %}
+
+{% block page-wrapper %}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<!-- <div class="col-lg-6"> -->
+					<form role="form" method="post" action="{% url 'myaccount:editProfile'%}" enctype="multipart/form-data">
+						<div class="form-group">{% csrf_token %}</div>
+						<div class="form-group">
+							<label>Full Name</label>
+							{% render_field profile_form.fullname class="form-control" autofocus="" %}
+						</div>
+						<div class="form-group">
+							<label>Company</label>
+							{% render_field profile_form.company class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Description</label>
+							{% render_field profile_form.description class="form-control" %}
+						</div>
+						<div class="form-group">
+							<label>Role</label>
+							{% render_field profile_form.role class="form-control" disabled=""%}
+						</div>
+						<div class="form-group">
+							<label>Logo</label>
+							{% render_field profile_form.logo class="form-control" %}
+						</div>
+						<input type="submit" class="btn btn-lg btn-success btn-block" value="Submit" />
+                        <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

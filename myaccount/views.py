@@ -8,6 +8,9 @@ from django.contrib import messages
 from myaccount.models import bizCategory, bizGoal, bizProject, projectPic
 from myaccount.forms import ProjectForm, projectPicform
 
+from userprofile.models import Profile
+from userprofile.forms import ProfileForm
+
 import os
 from django.conf import settings
 # Create your views here.
@@ -125,3 +128,26 @@ def myProjects(request):
 	context = {'listings':projects}
 	return render(request, 'myaccount/myprojects.html', context)
 	# return HttpResponse("Hello, world. You're at the polls index.")
+
+@login_required
+def editProfile(request):
+	# tflag = "edit"
+	# print request.user.id
+	# A boolean value for telling the template whether the registration was successful.
+	# Set to False initially. Code changes value to True when registration succeeds.
+	# added = False
+	p = request.user.myprofile
+	if request.method == 'POST':
+		profile_form = ProfileForm(request.POST,instance=p)
+		if profile_form.is_valid():
+			# profile = profile_form.save(commit=False)
+			# pro.post_by = request.user
+			project.save()
+			# added = True
+			messages.success(request, 'Your profile is successfullly updated.')
+		return HttpResponseRedirect(reverse('myaccount:myProjects'))
+	else:
+		profile_form = ProfileForm(instance=p)
+	context = {'profile_form':profile_form}
+	return render(request, 'myaccount/editprofile.html', context)
+	# return HttpResponse("Hello, world. You're at the Add product.")
