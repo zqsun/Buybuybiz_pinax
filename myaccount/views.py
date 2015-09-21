@@ -80,7 +80,7 @@ def editProject(request,project_id):
 
 		if pic_form.is_valid():
 			pic_new = pic_form.save(commit=False)
-			pic_new.project = project
+			# pic_new.project = project
 			if 'picture' in request.FILES:
 				# Delete the old picture
 				if pic_pre:
@@ -140,9 +140,9 @@ def editProfile(request):
 	if request.method == 'POST':
 		profile_form = ProfileForm(request.POST,instance=p)
 		if profile_form.is_valid():
-			# profile = profile_form.save(commit=False)
+			profile = profile_form.save()
 			# pro.post_by = request.user
-			project.save()
+			profile.save()
 			# added = True
 			messages.success(request, 'Your profile is successfullly updated.')
 		return HttpResponseRedirect(reverse('myaccount:editProfile'))
