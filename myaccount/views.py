@@ -100,7 +100,7 @@ def delProject(request,project_id):
 	project = bizProject.objects.get(pk=project_id)
 	try:
 		pic = projectPic.objects.get(project = project)
-	except projectic.DoesNotExist:
+	except projectPic.DoesNotExist:
 		pic = None
 	# pic = productPic.objects.get(product = product)
 	if project.post_by != request.user:
