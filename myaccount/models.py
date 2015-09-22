@@ -15,9 +15,9 @@ class bizGoal(models.Model):
 
 class bizProject(models.Model):
 	name = models.CharField(max_length=200)
-	description = models.TextField()
+	description = models.TextField(null=True,blank=True)
 	# quantity = models.DecimalField(max_digits=11,decimal_places=2)
-	price = models.DecimalField(max_digits=11,decimal_places=2,default=0)
+	price = models.DecimalField(max_digits=11,decimal_places=2,default=0,null=True,blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 	post_by = models.ForeignKey(User)

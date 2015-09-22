@@ -10,9 +10,9 @@ class UserRole(models.Model):
 
 class Profile(models.Model):
 	user = models.OneToOneField(User,related_name='myprofile')
-	fullname = models.CharField(max_length=100)
-	company = models.CharField(max_length=150)
-	description = models.TextField(default=" ")
+	fullname = models.CharField(max_length=100,null=True,blank=True)
+	company = models.CharField(max_length=150,null=True,blank=True)
+	description = models.TextField(default=" ",null=True,blank=True)
 	logo = models.ImageField(upload_to='profile_images',blank=True)
 	role = models.ForeignKey(UserRole)
 	# address = models.CharField(max_length=150)
