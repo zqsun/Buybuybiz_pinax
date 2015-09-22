@@ -3,21 +3,21 @@
         "pk": 1,
         "model": "myaccount.bizGoal",
         "fields": {
-            "goal": "Companies For Sale"
+            "goal": "Look for Funding"
         }
     },
     {
         "pk": 2,
         "model": "myaccount.bizGoal",
         "fields": {
-            "goal": "Looking for Funding"
+            "goal": "Technologies Transfer"
         }
     },
     {
         "pk": 3,
         "model": "myaccount.bizGoal",
         "fields": {
-            "goal": "Technologies Transfer"
+            "goal": "Companies for Sale"
         }
     },
     {
