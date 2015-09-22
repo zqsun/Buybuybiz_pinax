@@ -111,7 +111,7 @@ def delProject(request,project_id):
 			pic.delete()
 		messages.success(request, 'Project: %s is successfullly deleted.' % project.name)
 		project.delete()
-		return HttpResponseRedirect(reverse('myaccount:myprojects'))
+		return HttpResponseRedirect(reverse('myaccount:myProjects'))
 
 @login_required
 def myProjects(request):
