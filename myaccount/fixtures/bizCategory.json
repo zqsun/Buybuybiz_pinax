@@ -41,4 +41,18 @@
             "category": "Entertainment"
         }
     }
+    {
+        "pk": 7,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Aviation"
+        }
+    }
+    {
+        "pk": 8,
+        "model": "myaccount.bizCategory",
+        "fields": {
+            "category": "Manufacturing"
+        }
+    }
 ]
