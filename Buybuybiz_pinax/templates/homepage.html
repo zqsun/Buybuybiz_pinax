@@ -7,6 +7,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block body_base %}
+{% comment "Optional Slider" %}
 <div id="myCarouselSlider" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -55,8 +56,10 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    {% endcomment %}
     <!-- Main Body  -->
     <div class="container" role="main">
+        {% comment "marketing" %}
         <div class="marketing">
               <!-- Three columns of text below the carousel -->
               <div class="row">
@@ -124,4 +127,5 @@
 
               <!-- /END THE FEATURETTES -->
     </div>
+    {% endcomment %}
 {% endblock %}
