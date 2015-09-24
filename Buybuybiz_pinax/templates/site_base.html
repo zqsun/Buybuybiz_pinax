@@ -44,7 +44,21 @@
 				{% block nav %}
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Projects<span class="caret"></span></a>
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service<span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+					  	<li><a href="{% url 'mainsite:service' 'Companies For Sale' %}">Companies For Sale</a></li>
+					  	<li><a href="{% url 'mainsite:service' 'Looking for Funding' %}">Looking for Funding</a></li>
+					  	<li><a href="{% url 'mainsite:service' 'Technologies Transfer' %}">Technologies Transfer</a></li>
+					  	<li><a href="{% url 'mainsite:service' 'Look for Partners' %}">Look for Partners</a></li>
+					  	<li><a href="{% url 'mainsite:service' 'Look for Markets' %}">Look for Markets</a></li>
+					  </ul>
+					</li>
+					<li><a href="{% url 'browsepartners' %}">Partners</a></li>
+					<li><a href="#about">Team</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
 					  	<li><a href="{% url 'mainsite:browseProject' 'ALL' %}">All Indutries</a></li>
 					  	<li><a href="{% url 'mainsite:browseProject' 'Bio Science' %}">Bio Science</a></li>
@@ -58,9 +72,6 @@
 					  	<li><a href="{% url 'mainsite:browseProject' 'Other' %}">Other</a></li>
 					  </ul>
 					</li>
-					<li><a href="{% url 'browsepartners' %}">Partners</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
 				</ul>
 				{% endblock %}
 				{% block account_bar %}{% include "_account_bar.html" %}{% endblock %}

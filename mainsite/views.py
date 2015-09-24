@@ -108,3 +108,9 @@ def browseProject(request,category_name):
     context = {'results':results,'form':project_form,'category':category_name}
     return render(request, 'mainsite/browseProject.html', context)
 
+def service(request,goal_name):
+    results = bizProject.objects.filter(goal__goal__contains=goal_name).order_by('-updated_at')
+    project_form = ProjectSearchForm()
+    context = {'results':results,'form':project_form,'goal':goal_name}
+    return render(request, 'mainsite/service.html', context)
+
